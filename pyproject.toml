@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "prompt-eval-rubric"
+version = "0.1.0"
+description = "Score LLM outputs against named 0.0-1.0 rubrics with optional weights and reasons. Composable, BYO scoring functions, zero deps."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Mukunda Rao Katta", email = "mukunda.vjcs6@gmail.com" }]
+keywords = [
+  "ai",
+  "llm",
+  "eval",
+  "rubric",
+  "scoring",
+  "observability",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[project.urls]
+Homepage = "https://github.com/MukundaKatta/prompt-eval-rubric"
+Source = "https://github.com/MukundaKatta/prompt-eval-rubric"
+Issues = "https://github.com/MukundaKatta/prompt-eval-rubric/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/prompt_eval_rubric"]
